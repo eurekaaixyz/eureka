@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <a href="tokenomics.html" style="margin-right: 20px;">Tokenomics</a>
                     </div>
                     <div class="nav-actions">
-                        <a href="#" class="try-btn">Try EurekaAI</a>
+                        <a href="https://forms.gle/VNHQGunpVJtRDPdYA" class="try-btn" target="_blank">Try EurekaAI</a>
                     </div>
                 </nav>
             </div>
