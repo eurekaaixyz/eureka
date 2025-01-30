@@ -1,0 +1,84 @@
+.header {
+  padding: 0.75rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+.nav {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  margin-left: 2rem;
+}
+
+.nav-links a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.9375rem;
+  transition: opacity 0.2s;
+  opacity: 0.85;
+}
+
+.nav-links a:hover {
+  opacity: 1;
+}
+
+.nav-actions {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+/* .login-btn {
+  color: var(--text);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  font-size: 0.9375rem;
+  opacity: 0.85;
+  transition: opacity 0.2s;
+}
+
+.login-btn:hover {
+  opacity: 1;
+} */
+
+.try-btn {
+  background: #2D5BFF;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.9375rem;
+  transition: background-color 0.2s;
+}
+
+.try-btn:hover {
+  background: #1E4AEE;
+}
+
+/* Add this to your main CSS file or create a new rule in index.html */
+body {
+  padding-top: 4rem;
+} 
