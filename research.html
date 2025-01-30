@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research - EurekaAI</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="components/header.css">
+    <style>
+        :root {
+            --background: #0A0A0A;
+            --text: #FFFFFF;
+            --text-secondary: rgba(255, 255, 255, 0.95);
+            --text-tertiary: rgba(255, 255, 255, 0.85);
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --gradient-1: linear-gradient(135deg, #1a237e 0%, #0d47a1 100%);
+            --gradient-2: linear-gradient(135deg, #311b92 0%, #4527a0 100%);
+            --gradient-3: linear-gradient(135deg, #b71c1c 0%, #c62828 100%);
+            --gradient-4: linear-gradient(135deg, #004d40 0%, #00695c 100%);
+            --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            padding-top: 4rem;
+            background-color: var(--background);
+            color: var(--text);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        .hero-section {
+            position: relative;
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            background: var(--gradient-1);
+            padding: 6rem 2rem;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><rect width="1" height="1" fill="rgba(255,255,255,0.05)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            color: #ffffff;
+            text-shadow: var(--text-shadow);
+            letter-spacing: -0.02em;
+        }
+
+        .hero-content .subtitle {
+            font-size: 1.5rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+            text-shadow: var(--text-shadow);
+        }
+
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 4rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .research-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 2.5rem;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .research-card:nth-child(1),
+        .research-card:nth-child(2),
+        .research-card:nth-child(3),
+        .research-card:nth-child(4) {
+            position: relative;
+        }
+
+        .research-card:nth-child(1)::before,
+        .research-card:nth-child(2)::before,
+        .research-card:nth-child(3)::before,
+        .research-card:nth-child(4)::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0.9;
+            z-index: -1;
+            transition: opacity 0.3s ease;
+        }
+
+        .research-card:nth-child(1)::before { background: var(--gradient-1); }
+        .research-card:nth-child(2)::before { background: var(--gradient-2); }
+        .research-card:nth-child(3)::before { background: var(--gradient-3); }
+        .research-card:nth-child(4)::before { background: var(--gradient-4); }
+
+        .research-card:hover::before {
+            opacity: 1;
+        }
+
+        .card-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+        }
+
+        .research-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: #ffffff;
+            font-weight: 700;
+            text-shadow: var(--text-shadow);
+            letter-spacing: -0.01em;
+        }
+
+        .research-card p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            color: var(--text-secondary);
+            text-shadow: var(--text-shadow);
+        }
+
+        .research-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .research-card li {
+            padding: 0.8rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            font-size: 1.1rem;
+            color: var(--text-tertiary);
+            text-shadow: var(--text-shadow);
+        }
+
+        .research-card li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #ffffff;
+            text-shadow: var(--text-shadow);
+        }
+
+        .future-research {
+            background: rgba(255, 255, 255, 0.02);
+            padding: 6rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .contact-box {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-top: 3rem;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .contact-box h3 {
+            color: #ffffff;
+            margin-bottom: 1rem;
+            text-shadow: var(--text-shadow);
+        }
+
+        .contact-box p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        .contact-box a {
+            color: #64b5f6;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .contact-box a:hover {
+            color: #90caf9;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-content .subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .research-grid {
+                grid-template-columns: 1fr;
+                padding: 2rem 1rem;
+            }
+
+            .research-card h3 {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>Advancing Crypto AI Research</h1>
+                <p class="subtitle">Pioneering the intersection of artificial intelligence and cryptocurrency technologies to shape the future of decentralized finance</p>
+            </div>
+        </section>
+
+        <div class="research-grid">
+            <div class="research-card">
+                <div class="card-icon">📊</div>
+                <h3>AI-Powered Trading Analytics</h3>
+                <p>Our TradingGPT research focuses on developing advanced machine learning models for crypto markets, combining traditional trading strategies with cutting-edge AI.</p>
+                <ul>
+                    <li>Real-time market sentiment analysis across multiple social platforms</li>
+                    <li>Advanced pattern recognition in price movements using neural networks</li>
+                    <li>Predictive modeling for market trends with 87% accuracy</li>
+                    <li>Risk assessment and portfolio optimization using deep learning</li>
+                    <li>Integration of on-chain metrics for enhanced prediction</li>
+                    <li>Arbitrage opportunity detection across exchanges</li>
+                    <li>Whale movement analysis and impact prediction</li>
+                </ul>
+            </div>
+
+            <div class="research-card">
+                <div class="card-icon">🔄</div>
+                <h3>DeFi Protocol Intelligence</h3>
+                <p>Through our DeFi Assistant research, we're revolutionizing how users interact with decentralized finance protocols.</p>
+                <ul>
+                    <li>AI-driven yield optimization across multiple chains</li>
+                    <li>Smart contract vulnerability detection using ML</li>
+                    <li>Cross-chain liquidity path optimization</li>
+                    <li>Gas optimization strategies using predictive analytics</li>
+                    <li>MEV protection through AI-powered routing</li>
+                    <li>Impermanent loss prediction models</li>
+                    <li>Protocol risk scoring using multi-factor analysis</li>
+                </ul>
+            </div>
+
+            <div class="research-card">
+                <div class="card-icon">🎨</div>
+                <h3>NFT Market Analysis</h3>
+                <p>Our NFT Curator research explores the intersection of AI and digital collectibles, bringing data-driven insights to the NFT space.</p>
+                <ul>
+                    <li>Machine learning-based rarity scoring systems</li>
+                    <li>Trend prediction using social sentiment analysis</li>
+                    <li>Visual feature extraction for art valuation</li>
+                    <li>Wash trading detection algorithms</li>
+                    <li>Cross-collection correlation analysis</li>
+                    <li>Community engagement metrics and predictions</li>
+                    <li>Generative AI for NFT creation and attributes</li>
+                </ul>
+            </div>
+
+            <div class="research-card">
+                <div class="card-icon">🔍</div>
+                <h3>Crypto Research Intelligence</h3>
+                <p>CryptoResearch AI advances the field through comprehensive blockchain analysis and market intelligence.</p>
+                <ul>
+                    <li>Real-time on-chain data analysis and pattern detection</li>
+                    <li>Network health and security metrics</li>
+                    <li>Token economics modeling and simulation</li>
+                    <li>Project viability assessment using ML</li>
+                    <li>Governance proposal impact analysis</li>
+                    <li>Cross-chain activity correlation</li>
+                    <li>Regulatory compliance risk assessment</li>
+                </ul>
+            </div>
+        </div>
+
+        <section class="future-research">
+            <div class="container">
+                <div class="research-card">
+                    <h2>Future Research Initiatives</h2>
+                    <p>Our upcoming research focuses on pushing the boundaries of what's possible in crypto and AI:</p>
+                    
+                    <div class="future-initiatives">
+                        <div class="initiative">
+                            <h4>Privacy and Security</h4>
+                            <ul>
+                                <li>Zero-knowledge proofs in AI model validation</li>
+                                <li>Privacy-preserving machine learning for trading</li>
+                                <li>Homomorphic encryption in DeFi analytics</li>
+                            </ul>
+                        </div>
+
+                        <div class="initiative">
+                            <h4>Decentralized AI</h4>
+                            <ul>
+                                <li>Decentralized AI training networks</li>
+                                <li>Cross-chain AI oracle development</li>
+                                <li>Blockchain-based model governance</li>
+                            </ul>
+                        </div>
+
+                        <div class="initiative">
+                            <h4>Market Intelligence</h4>
+                            <ul>
+                                <li>Advanced market manipulation detection</li>
+                                <li>Multi-chain correlation analysis</li>
+                                <li>Predictive analytics for emerging tokens</li>
+                            </ul>
+                        </div>
+
+                        <div class="initiative">
+                            <h4>Infrastructure Innovation</h4>
+                            <ul>
+                                <li>Layer-2 optimization algorithms</li>
+                                <li>Cross-chain bridge security analysis</li>
+                                <li>Scalability solution benchmarking</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="research-stats">
+                        <div class="stat">
+                            <h3>20+</h3>
+                            <p>Research Papers</p>
+                        </div>
+                        <div class="stat">
+                            <h3>50+</h3>
+                            <p>AI Models</p>
+                        </div>
+                        <div class="stat">
+                            <h3>100TB+</h3>
+                            <p>Data Analyzed</p>
+                        </div>
+                        <div class="stat">
+                            <h3>15+</h3>
+                            <p>Chain Integrations</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-box">
+                        <h3>Join Our Research Network</h3>
+                        <p>Interested in contributing to the future of crypto AI? We're always looking for researchers, developers, and partners.</p>
+                        <p>Contact us at: <a href="mailto:research@eurekaai.com">research@eurekaai.xyz</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+    <script src="./components/include.js"></script>
+</body>
+</html> 

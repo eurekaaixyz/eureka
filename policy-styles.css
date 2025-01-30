@@ -1,0 +1,116 @@
+/* Reset and base styles */
+.policy-container {
+    max-width: 800px; /* Narrower container for better readability */
+    margin: 0 auto;
+    padding: 80px 24px;
+    color: var(--text-primary);
+}
+
+.policy-content.centered {
+    text-align: center; /* Center align all content */
+}
+
+.policy-header {
+    margin-bottom: 64px;
+    text-align: center;
+}
+
+.update-date {
+    color: var(--text-secondary);
+    font-size: 14px;
+    margin-bottom: 24px;
+}
+
+.policy-header h1 {
+    font-size: 44px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin: 0;
+}
+
+.policy-intro {
+    margin: 0 auto 48px;
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 600px; /* Control line length for readability */
+}
+
+.policy-intro a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.policy-intro a:hover {
+    text-decoration: underline;
+}
+
+.policy-section {
+    margin: 0 auto 40px;
+    max-width: 600px;
+    text-align: left; /* Keep actual content left-aligned for readability */
+}
+
+.policy-section h2 {
+    font-size: 24px;
+    margin: 0 0 24px;
+    font-weight: 600;
+    text-align: center; /* Center section headers */
+}
+
+.policy-section p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 16px;
+    color: var(--text-secondary);
+}
+
+.policy-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 24px;
+}
+
+.policy-section ul li {
+    margin-bottom: 12px;
+    padding-left: 24px;
+    position: relative;
+}
+
+.policy-section ul li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--text-secondary);
+}
+
+/* Language selector styling */
+.language-selector-top {
+    text-align: center;
+    margin-bottom: 64px;
+}
+
+.language-selector-top select {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    width: 200px;
+    cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .policy-container {
+        padding: 40px 20px;
+    }
+
+    .policy-header h1 {
+        font-size: 36px;
+    }
+
+    .policy-section {
+        padding: 0 16px;
+    }
+} 

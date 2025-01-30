@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EKAI Tokenomics | EurekaAI</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="components/header.css">
+    <link rel="stylesheet" href="product-styles.css">
+    <style>
+        .tokenomics-hero {
+            background: linear-gradient(135deg, #1a237e, #0d47a1);
+            padding: 4rem 2rem;
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .token-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 1.5rem;
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        .distribution-chart {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .utility-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+        }
+
+        .utility-card {
+            background: linear-gradient(145deg, #2a2a2a, #3a3a3a);
+            border-radius: 16px;
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .utility-card h3 {
+            color: #4CAF50;
+            margin-bottom: 1rem;
+        }
+
+        .mechanics-section {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 3rem 2rem;
+            margin: 2rem 0;
+        }
+
+        .glow-text {
+            color: #4CAF50;
+            text-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+        }
+
+        .token-tag {
+            display: inline-block;
+            background: rgba(76, 175, 80, 0.2);
+            color: #4CAF50;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin: 0.25rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header placeholder -->
+    <div id="header-placeholder"></div>
+
+    <section class="tokenomics-hero">
+        <h1>EKAI Token</h1>
+        <p class="glow-text">EurekaAI's Native Utility Token</p>
+        <div class="token-stats">
+            <div class="stat-card">
+                <h3>Network</h3>
+                <p>Solana</p>
+            </div>
+            <div class="stat-card">
+                <h3>Total Supply</h3>
+                <p>100,000,000 EKAI</p>
+            </div>
+            <div class="stat-card">
+                <h3>Initial Price</h3>
+                <p>$0.10</p>
+            </div>
+            <div class="stat-card">
+                <h3>Token Standard</h3>
+                <p>SPL Token</p>
+            </div>
+        </div>
+    </section>
+
+    <main class="container">
+        <section class="distribution-chart">
+            <h2>Token Distribution</h2>
+            <div class="token-stats">
+                <div class="stat-card">
+                    <h3>Public Sale</h3>
+                    <p>30%</p>
+                    <span class="token-tag">30,000,000 EKAI</span>
+                </div>
+                <div class="stat-card">
+                    <h3>Platform Rewards</h3>
+                    <p>25%</p>
+                    <span class="token-tag">25,000,000 EKAI</span>
+                </div>
+                <div class="stat-card">
+                    <h3>Team & Advisors</h3>
+                    <p>15%</p>
+                    <span class="token-tag">15,000,000 EKAI</span>
+                </div>
+                <div class="stat-card">
+                    <h3>Development Fund</h3>
+                    <p>15%</p>
+                    <span class="token-tag">15,000,000 EKAI</span>
+                </div>
+                <div class="stat-card">
+                    <h3>Community Treasury</h3>
+                    <p>10%</p>
+                    <span class="token-tag">10,000,000 EKAI</span>
+                </div>
+                <div class="stat-card">
+                    <h3>Initial Liquidity</h3>
+                    <p>5%</p>
+                    <span class="token-tag">5,000,000 EKAI</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="utility-grid">
+            <div class="utility-card">
+                <h3>Platform Access</h3>
+                <ul>
+                    <li>Stake EKAI to access premium AI features</li>
+                    <li>Higher tiers require more staked tokens</li>
+                </ul>
+            </div>
+            <div class="utility-card">
+                <h3>Governance</h3>
+                <ul>
+                    <li>Token holders can vote on platform upgrades</li>
+                    <li>Proposal creation requires minimum stake</li>
+                </ul>
+            </div>
+            <div class="utility-card">
+                <h3>Revenue Sharing</h3>
+                <ul>
+                    <li>30% of platform fees distributed to stakers</li>
+                    <li>Rewards based on stake amount and duration</li>
+                </ul>
+            </div>
+            <div class="utility-card">
+                <h3>AI Training Incentives</h3>
+                <ul>
+                    <li>Earn tokens by providing quality data</li>
+                    <li>Rewards for improving AI models</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="mechanics-section">
+            <h2>Staking Mechanics</h2>
+            <div class="token-stats">
+                <div class="stat-card">
+                    <h3>Minimum Stake</h3>
+                    <p>1,000 EKAI</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Lock Periods</h3>
+                    <p>3, 6, or 12 months</p>
+                </div>
+                <div class="stat-card">
+                    <h3>APY Range</h3>
+                    <p>8-15%</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Early Unstaking Penalty</h3>
+                    <p>10%</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mechanics-section">
+            <h2>Deflationary Mechanisms</h2>
+            <div class="utility-grid">
+                <div class="utility-card">
+                    <h3>Transaction Burning</h3>
+                    <p>1% of all transaction fees burned</p>
+                </div>
+                <div class="utility-card">
+                    <h3>Quarterly Buyback</h3>
+                    <p>Regular buyback and burn from platform revenue</p>
+                </div>
+                <div class="utility-card">
+                    <h3>Dynamic Burning</h3>
+                    <p>Burning rate adjusted based on platform usage</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Include components script -->
+    <script src="./components/include.js"></script>
+</body>
+</html> 
